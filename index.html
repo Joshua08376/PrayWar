@@ -2,11 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Prayer Warrior</title>
+        <title>New Webpage</title>
     </head>
-    
+    <!-- add: <link rel='icon' href='favicon.ico' type='image/x-icon'/ >   -->
     <body>
-    
     <style>
         #Title {
             color: rgb(219, 44, 44); 
@@ -30,23 +29,17 @@
         
         
     </style>
-    
-    <h1 id="Title" style="font-size: 42px">Prayer Warrior</h1>
+    <h1 id="Title" style="font-size: 40px">Prayer Warrior</h1>
     <canvas id="Programcanvas"style="border:2px solid #000000"></canvas> 
     <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
   <script>
   var programCode = function(processingInstance) {
     with (processingInstance) {
-        size(window.innerWidth/1.2, window.innerHeight/1); 
+        size(window.innerWidth/1.2, window.innerHeight/1.1); 
         frameRate(30);
         {   
             
-            mouseClicked = function() {
-                if (dist(mouseX, mouseY, window.innerWidth/2.6, window.innerHeight/1.6) <= window.innerWidth/4.5/2) {
-                            alert("This currently is under construction.");
-                        
-                    }
-            }
+            
             
             var scene = 0;
             var progress = 0;
@@ -68,32 +61,41 @@
             var n = weekday[d.getDay()];
             
             var scene = 0;
+            
+            mouseClicked = function() {
+                if (dist(mouseX, mouseY, window.innerWidth/2.4, window.innerWidth/6) <= (window.innerWidth/4)/2) {
+                           alert("Prayer Open, Test: Sucsess, day: "+n)
+                        }
+                        else if (dist(mouseX, mouseY, window.innerWidth/2.4, window.innerWidth/2.2) <= (window.innerWidth/4)/2) {
+                            alert("Open Scripture, Test: Sucsess")
+                        }
+            }
+            
+            
             textAlign(CENTER,CENTER);
             draw = function() {
                 switch(scene){
                     case 0: {
-                        background(102, 102, 102);
-                        fill(38, 41, 128);
-                        textSize(window.innerHeight/6);
-                        text("Confirm Time", window.innerWidth/2.5, window.innerHeight/8);
-                        textSize(window.innerHeight/25);
+                        //rgb(219, 203, 31)
+                        background(173, 216, 230);
                         fill(0);
-                        text(d, window.innerWidth/2.5, window.innerHeight/4);
-                        ellipse(window.innerWidth/2.6, window.innerHeight/1.6, window.innerWidth/4.5, window.innerWidth/4.5);
-                        fill(255, 255, 0);
+                        ellipse(window.innerWidth/2.4, window.innerWidth/6, window.innerWidth/4, window.innerWidth/4);
+                        fill(219, 203, 31);
                         textSize(window.innerHeight/10);
-                        text("YES", window.innerWidth/2.65, window.innerHeight/1.6);
-                        if (dist(mouseX, mouseY, window.innerWidth/2.6, window.innerHeight/1.6) <= window.innerWidth/4.5/2) {
-                            cursor(HAND);
+                        text("PRAY", window.innerWidth/2.4, window.innerHeight/3.8);
+                        fill(0);
+                        ellipse(window.innerWidth/2.4, window.innerWidth/2.2, window.innerWidth/4, window.innerWidth/4);
+                        fill(219, 203, 31);
+                        textSize(window.innerHeight/11);
+                        text("SCRIPT", window.innerWidth/2.4, window.innerHeight/1.5);
                         
-                        }
-                        else {
-                            cursor();
-                        }
-                    }
+                        
+                        
+                    }//end of case 0
                 
-                }
-            };
+                }// end of switch scenes
+                
+            };// end of draw
         
         
         
@@ -108,7 +110,7 @@
         
         
         
-        }
+        }// end of PJS
         
         
     }};
