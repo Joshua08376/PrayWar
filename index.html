@@ -63,10 +63,10 @@
             var scene = 0;
             
             mouseClicked = function() {
-                if (dist(mouseX, mouseY, window.innerWidth/2.4, window.innerWidth/6) <= (window.innerWidth/4)/2) {
+                if (dist(mouseX, mouseY, window.innerWidth/2.4, window.innerHeight/3.9) <= (window.innerWidth/4)/2) {
                            alert("Prayer Open, Test: Sucsess, day: "+n)
                         }
-                        else if (dist(mouseX, mouseY, window.innerWidth/2.4, window.innerWidth/2.2) <= (window.innerWidth/4)/2) {
+                        else if (dist(mouseX, mouseY, window.innerWidth/2.4, window.innerHeight/1.5) <= (window.innerWidth/4)/2) {
                             alert("Open Scripture, Test: Sucsess")
                         }
             }
@@ -79,12 +79,12 @@
                         //rgb(219, 203, 31)
                         background(173, 216, 230);
                         fill(0);
-                        ellipse(window.innerWidth/2.4, window.innerWidth/6, window.innerWidth/4, window.innerWidth/4);
+                        ellipse(window.innerWidth/2.4, window.innerHeight/3.9, window.innerWidth/4, window.innerWidth/4);
                         fill(219, 203, 31);
                         textSize(window.innerHeight/10);
                         text("PRAY", window.innerWidth/2.4, window.innerHeight/3.8);
                         fill(0);
-                        ellipse(window.innerWidth/2.4, window.innerWidth/2.2, window.innerWidth/4, window.innerWidth/4);
+                        ellipse(window.innerWidth/2.4, window.innerHeight/1.5, window.innerWidth/4, window.innerWidth/4);
                         fill(219, 203, 31);
                         textSize(window.innerHeight/11);
                         text("SCRIPT", window.innerWidth/2.4, window.innerHeight/1.5);
