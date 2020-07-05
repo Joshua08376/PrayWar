@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Prayer Warrior</title>
+    </head>
+    
+    <body>
+    
+    <style>
+        #Title {
+            color: rgb(219, 44, 44); 
+            text-shadow: 2px 2px 5px black;
+            position: absolute;
+            top:  10%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #Programcanvas{
+            position: absolute;
+            left: 7%;
+            top:34%;
+            
+        }
+        body {
+            background-color: red;
+            background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+        
+        }
+        
+        
+    </style>
+    
+    <h1 id="Title" style="font-size: 42px">Prayer Warrior</h1>
+    <canvas id="Programcanvas"style="border:2px solid #000000"></canvas> 
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+  <script>
+  var programCode = function(processingInstance) {
+    with (processingInstance) {
+        size(window.innerWidth/1.2, window.innerHeight/1); 
+        frameRate(30);
+        {   
+            
+            mouseClicked = function() {
+                if (dist(mouseX, mouseY, window.innerWidth/2.6, window.innerHeight/1.6) <= window.innerWidth/4.5/2) {
+                            alert("This currently is under construction.");
+                        
+                    }
+            }
+            
+            var scene = 0;
+            var progress = 0;
+            var months = month();
+            var days = day();
+            var years = year();
+            var hours = hour();
+            var mins = minute();
+            var d = new Date();
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+
+            var n = weekday[d.getDay()];
+            
+            var scene = 0;
+            textAlign(CENTER,CENTER);
+            draw = function() {
+                switch(scene){
+                    case 0: {
+                        background(102, 102, 102);
+                        fill(38, 41, 128);
+                        textSize(window.innerHeight/6);
+                        text("Confirm Time", window.innerWidth/2.5, window.innerHeight/8);
+                        textSize(window.innerHeight/25);
+                        fill(0);
+                        text(d, window.innerWidth/2.5, window.innerHeight/4);
+                        ellipse(window.innerWidth/2.6, window.innerHeight/1.6, window.innerWidth/4.5, window.innerWidth/4.5);
+                        fill(255, 255, 0);
+                        textSize(window.innerHeight/10);
+                        text("YES", window.innerWidth/2.65, window.innerHeight/1.6);
+                        if (dist(mouseX, mouseY, window.innerWidth/2.6, window.innerHeight/1.6) <= window.innerWidth/4.5/2) {
+                            cursor(HAND);
+                        
+                        }
+                        else {
+                            cursor();
+                        }
+                    }
+                
+                }
+            };
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        }
+        
+        
+    }};
+
+  
+  var canvas = document.getElementById("Programcanvas"); 
+  var processingInstance = new Processing(canvas, programCode); 
+  </script>
+    
+    </body>
+</html>
