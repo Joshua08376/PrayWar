@@ -17,7 +17,7 @@
         }
         #Programcanvas{
             position: absolute;
-            left: 7%;
+            left: 17%;
             top:34%;
             
         }
@@ -35,7 +35,7 @@
   <script>
   var programCode = function(processingInstance) {
     with (processingInstance) {
-        size(window.innerWidth/1.2, window.innerHeight/1.1); 
+        size(window.innerWidth/1.55, window.innerHeight/1.55); 
         frameRate(30);
         {   
             
@@ -63,33 +63,43 @@
             var scene = 0;
             
             mouseClicked = function() {
-                if (dist(mouseX, mouseY, window.innerWidth/2.4, window.innerHeight/3.9) <= (window.innerWidth/4)/2) {
-                           alert("Prayer Open, Test: Sucsess, day: "+n)
-                        }
-                        else if (dist(mouseX, mouseY, window.innerWidth/2.4, window.innerHeight/1.5) <= (window.innerWidth/4)/2) {
-                            alert("Open Scripture, Test: Sucsess")
-                        }
+                if (scene === 0) {
+                    if (dist(mouseX, mouseY,window.innerWidth/3.2, window.innerHeight/5) <= (window.innerHeight/4)/2) {
+                        alert("Button, Sucess. Day: "+n)
+                    }
+                    else if (dist(mouseX, mouseY,window.innerWidth/3.2, window.innerHeight/2.1) <= (window.innerHeight/4)/2) {
+                        alert("Script Button, Sucess")
+                    }
+                
+                }
             }
             
             
             textAlign(CENTER,CENTER);
+            
             draw = function() {
                 switch(scene){
                     case 0: {
                         //rgb(219, 203, 31)
                         background(173, 216, 230);
-                        fill(0);
-                        ellipse(window.innerWidth/2.4, window.innerHeight/3.9, window.innerWidth/4, window.innerWidth/4);
+                        fill(0, 0 ,0);
+                        ellipse(window.innerWidth/3.2, window.innerHeight/5, window.innerHeight/4, window.innerHeight/4);
+                        ellipse(window.innerWidth/3.2, window.innerHeight/2.1, window.innerHeight/4, window.innerHeight/4);
                         fill(219, 203, 31);
-                        textSize(window.innerHeight/10);
-                        text("PRAY", window.innerWidth/2.4, window.innerHeight/3.8);
-                        fill(0);
-                        ellipse(window.innerWidth/2.4, window.innerHeight/1.5, window.innerWidth/4, window.innerWidth/4);
-                        fill(219, 203, 31);
-                        textSize(window.innerHeight/11);
-                        text("SCRIPT", window.innerWidth/2.4, window.innerHeight/1.5);
+                        textSize(window.innerHeight/12)
+                        text("PRAY", window.innerWidth/3.2, window.innerHeight/4.8);
+                        textSize(window.innerHeight/16)
+                        text("SCRIPT", window.innerWidth/3.2, window.innerHeight/2.1);
                         
-                        
+                        if (dist(mouseX, mouseY,window.innerWidth/3.2, window.innerHeight/5) <= (window.innerHeight/4)/2) {
+                            cursor(HAND);
+                        }
+                        else if (dist(mouseX, mouseY,window.innerWidth/3.2, window.innerHeight/2.1) <= (window.innerHeight/4)/2) {
+                        cursor(HAND);
+                        }
+                        else {
+                            cursor();
+                        }
                         
                     }//end of case 0
                 
