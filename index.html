@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>New Webpage</title>
+        <title>Prayer Warrior</title>
     </head>
     <!-- add: <link rel='icon' href='favicon.ico' type='image/x-icon'/ >   -->
     <body>
@@ -39,8 +39,12 @@
         frameRate(30);
         {   
             
-            
-            
+            (function() {
+	            this[["KAInfiniteLoopCount"]] = -Infinity;
+            })();
+
+ 
+             
             var scene = 0;
             var progress = 0;
             var months = month();
@@ -60,7 +64,6 @@
 
             var n = weekday[d.getDay()];
             
-            var scene = 0;
             
             mouseClicked = function() {
                 if (scene === 0) {
@@ -68,9 +71,15 @@
                         alert("Button, Sucess. Day: "+n)
                     }
                     else if (dist(mouseX, mouseY,window.innerWidth/3.2, window.innerHeight/2.1) <= (window.innerHeight/4)/2) {
-                        alert("Script Button, Sucess")
+                        scene = 1;
                     }
                 
+                }
+                if (scene === 1) {
+                    if (dist(mouseX, mouseY, window.innerWidth/16, window.innerHeight/12) <= (window.innerHeight/8)/2) {
+                            scene = 0;
+                    }
+                    
                 }
             }
             
@@ -102,7 +111,35 @@
                         }
                         
                     }//end of case 0
-                
+                    break;
+                    case 1: {
+                        background(173, 216, 230);
+                        fill(0, 0, 0)
+                        textSize(window.innerHeight/17) 
+                        text("Ephesians 6:10-18", window.innerWidth/3.1, window.innerHeight/15);
+                        textSize(window.innerHeight/35) 
+                        text("Finally, be strong in the Lord and in his mighty power.\nPut on the full armor of God, so that you can take your\nstand against the devil’s schemes. For our struggle is not against\nflesh and blood, but against the rulers, against the authorities,\nagainst the powers of this dark world and against the spiritual forces\nof evil in the heavenly realms. Therefore put on the full\narmor of God, so that when the day of evil comes, you may be\nable to stand your ground, and after you have done everything,\nto stand. Stand firm then, with the belt of truth buckled\naround your waist, with the breastplate of righteousness in place,\nand with your feet fitted with the readiness that comes from\nthe gospel of peace. In addition to all this, take up the shield of faith,\nwith which you can extinguish all the flaming arrows of the evil one.\nTake the helmet of salvation and the sword of the Spirit,\nwhich is the word of God.", window.innerWidth/3, window.innerHeight/2.6);
+                        
+                        fill(0, 102, 255);
+                        ellipse(window.innerWidth/16, window.innerHeight/12, window.innerHeight/8, window.innerHeight/8)
+                        //rgb(0, 102, 255)
+                        fill(0, 0, 0);
+                        textSize(window.innerHeight/25);
+                        text("BACK", window.innerWidth/16, window.innerHeight/12);       
+                        if (dist(mouseX, mouseY, window.innerWidth/16, window.innerHeight/12) <= (window.innerHeight/8)/2) {
+                            cursor(HAND);
+                        }
+                        else {
+                            cursor();
+                        }
+                        
+                            
+                        
+                        
+                    }
+                    
+                    
+                    
                 }// end of switch scenes
                 
             };// end of draw
