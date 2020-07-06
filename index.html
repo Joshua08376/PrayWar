@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Prayer Warrior</title>
+        <title>New Webpage</title>
     </head>
     <!-- add: <link rel='icon' href='favicon.ico' type='image/x-icon'/ >   -->
     <body>
@@ -79,10 +79,14 @@
                             scene = 0;
                     }
                     
+                    
                 }
                 if (scene === 2) {
                     if (mouseX >= window.innerWidth/2.3 && mouseY >= window.innerHeight/2 && mouseX <= window.innerWidth+window.innerHeight/4 && mouseY <= window.innerHeight/2+window.innerHeight/4){
                             alert("Under Construction");
+                    }
+                    else if (mouseX >= window.innerWidth/21.8 && mouseY >= window.innerHeight/2 && mouseX <= window.innerWidth/21.8+window.innerHeight/4 && mouseY <= window.innerHeight/2+window.innerHeight/8){
+                            scene = 0;
                     }
                 }
             }
@@ -182,12 +186,20 @@
                         fill(255, 234, 0)
                         textSize(window.innerHeight/15);
                         text("YES!", window.innerWidth/2, window.innerHeight/1.8)
-                        if (mouseX >= window.innerWidth/2.3 && mouseY >= window.innerHeight/2 && mouseX <= window.innerWidth+window.innerHeight/4 && mouseY <= window.innerHeight/2+window.innerHeight/4){
+                        if (mouseX >= window.innerWidth/2.3 && mouseY >= window.innerHeight/2 && mouseX <= window.innerWidth/2.3+window.innerHeight/4 && mouseY <= window.innerHeight/2+window.innerHeight/8){
+                            cursor(HAND);
+                        }
+                        else if (mouseX >= window.innerWidth/21.8 && mouseY >= window.innerHeight/2 && mouseX <= window.innerWidth/21.8+window.innerHeight/4 && mouseY <= window.innerHeight/2+window.innerHeight/8){
                             cursor(HAND);
                         }
                         else {
                             cursor();
                         }
+                        fill(255, 0, 0);//rgb(255, 0, 0)
+                        rect(window.innerWidth/21.8, window.innerHeight/2, window.innerHeight/4, window.innerHeight/8, 20)
+                        fill(0)
+                        textSize(window.innerHeight/15);
+                        text("BACK", window.innerWidth/8, window.innerHeight/1.8)
                         
                         
                     }
