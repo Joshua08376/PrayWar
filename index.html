@@ -47,7 +47,6 @@
              rectMode(CENTER);
              ellipseMode(CENTER);
             var scene = 0;
-            var progress = 0;
             var months = month();
             var days = day();
             var years = year();
@@ -63,7 +62,6 @@
             weekday[5] = "Friday";
             weekday[6] = "Saturday";
             var n = weekday[d.getDay()];
-            
             
             mouseClicked = function() {
                 if (scene === 0) {
@@ -217,7 +215,34 @@
                         textAlign(CENTER, CENTER);
                         background(173, 216, 230);
                         if (n === "Monday") {
-                            
+                            {
+                                //head
+                                fill(255, 171, 171); 
+                                ellipse(window.innerWidth/3.5, window.innerHeight/4.3, window.innerHeight/8, window.innerHeight/8)
+                                fill(0);
+                                //legs
+                                rect(window.innerWidth/3.83, window.innerHeight/2, window.innerHeight/19, window.innerHeight/3.8, 20)
+                                rect(window.innerWidth/3.25, window.innerHeight/2, window.innerHeight/19, window.innerHeight/3.8, 20)
+                                rect(window.innerWidth/3.50, window.innerHeight/2.2, window.innerHeight/17, window.innerHeight/18)                               
+                                // arms
+                                pushMatrix();
+                                translate(window.innerWidth/4.28, window.innerHeight/2.68)
+                                rotate(7)
+                                fill(181, 18, 18)
+                                rect(0, 0, window.innerHeight/19, window.innerHeight/6.2, 20)
+                                popMatrix();
+                                pushMatrix();
+                                translate(window.innerWidth/2.95, window.innerHeight/2.68);
+                                rotate(-7)
+                                rect(0,0, window.innerHeight/19, window.innerHeight/6.2, 20)
+                                popMatrix();
+                                //body
+                                fill(181, 18, 18)
+                                rect(window.innerWidth/3.5, window.innerHeight/2.65, window.innerHeight/8, window.innerHeight/6, 20)
+                                
+                                
+                            }//human
+                            {
                             fill(0)
                             textSize(window.innerHeight/15)
                             text("STAND FIRM", window.innerWidth/3, window.innerHeight/10);
@@ -233,10 +258,44 @@
                             else {
                                 cursor();
                             }
-                            
+                            }//button
+                            fill(0);
+                            textSize(window.innerHeight/20)
+                            text("Ephesians 6:14\n"+'"Stand firm then"', window.innerWidth/2, window.innerHeight/2)
                         }
                         if (n === "Tuesday") {
-
+                            {
+                                //head
+                                fill(255, 171, 171); 
+                                ellipse(window.innerWidth/3.5, window.innerHeight/4.3, window.innerHeight/8, window.innerHeight/8)
+                                fill(0);
+                                //legs
+                                rect(window.innerWidth/3.83, window.innerHeight/2, window.innerHeight/19, window.innerHeight/3.8, 20)
+                                rect(window.innerWidth/3.25, window.innerHeight/2, window.innerHeight/19, window.innerHeight/3.8, 20)
+                                rect(window.innerWidth/3.50, window.innerHeight/2.2, window.innerHeight/17, window.innerHeight/18)                               
+                                // arms
+                                pushMatrix();
+                                translate(window.innerWidth/4.28, window.innerHeight/2.68)
+                                rotate(7)
+                                fill(181, 18, 18)
+                                rect(0, 0, window.innerHeight/19, window.innerHeight/6.2, 20)
+                                popMatrix();
+                                pushMatrix();
+                                translate(window.innerWidth/2.95, window.innerHeight/2.68);
+                                rotate(-7)
+                                rect(0,0, window.innerHeight/19, window.innerHeight/6.2, 20)
+                                popMatrix();
+                                //body
+                                fill(181, 18, 18)
+                                rect(window.innerWidth/3.5, window.innerHeight/2.65, window.innerHeight/8, window.innerHeight/6, 20)
+                                
+                                
+                            }//human
+                            fill(212, 190, 26)
+                            rect(window.innerWidth/3.5, window.innerHeight/2.3, window.innerHeight/7.7, window.innerHeight/28)
+                            fill(89, 34, 36)
+                            rect(window.innerWidth/3.5, window.innerHeight/2.3, window.innerHeight/12.4, window.innerHeight/28)
+                            {
                             fill(0)
                             textSize(window.innerHeight/15)
                             text("BELT OF TRUTH", window.innerWidth/3, window.innerHeight/10);
@@ -252,6 +311,10 @@
                             else {
                                 cursor();
                             }
+                            }//button
+                            fill(0);
+                            textSize(window.innerHeight/25)
+                            text("Ephesians 6:14\n"+'"with the belt of truth\nbuckled around\nyour waist"', window.innerWidth/2, window.innerHeight/2)
                             
                             
                         }
