@@ -83,11 +83,17 @@
                 }
                 if (scene === 2) {
                     if (mouseX >= window.innerWidth/2.3 && mouseY >= window.innerHeight/2 && mouseX <= window.innerWidth+window.innerHeight/4 && mouseY <= window.innerHeight/2+window.innerHeight/4){
-                            alert("Under Construction");
+                            scene = 3;
                     }
                     else if (mouseX >= window.innerWidth/21.8 && mouseY >= window.innerHeight/2 && mouseX <= window.innerWidth/21.8+window.innerHeight/4 && mouseY <= window.innerHeight/2+window.innerHeight/8){
                             scene = 0;
                     }
+                }
+                else if (scene === 3) {
+                    
+                    if (mouseX >= window.innerWidth/2.5 && mouseY >= window.innerHeight/6.1 && mouseX <=  window.innerWidth/2.5+window.innerHeight/5 && mouseY <= window.innerHeight/6.1+window.innerHeight/9) {
+                                scene = 0;
+                            }
                 }
             }
             
@@ -161,7 +167,7 @@
                         }
                         
                         if (n === "Tuesday") {
-                            textSize(window.innerHeight/16)
+                            textSize(window.innerHeight/18)
                             text("Did you pray for NE OH friends?", window.innerWidth/3.2, window.innerHeight/4)
                         }
                         if (n === "Wednesday") {
@@ -203,6 +209,105 @@
                         
                         
                     }
+                    break;
+                    case 3: {
+                        background(173, 216, 230);
+                        if (n === "Monday") {
+                            {
+                            fill(222, 207, 155);//rgb(240, 93, 98)
+                            ellipse(window.innerWidth/3.3, window.innerHeight/3.7, window.innerHeight/9, window.innerHeight/9);
+                            fill(0)
+                            rect(window.innerWidth/3.8, window.innerHeight/2.3, window.innerHeight/23, window.innerHeight/5, 20);
+                            rect(window.innerWidth/3.25, window.innerHeight/2.3, window.innerHeight/23, window.innerHeight/5, 20);
+                            rect(window.innerWidth/3.50, window.innerHeight/2.3, window.innerHeight/14, window.innerHeight/13, 0);
+                            fill(240, 93, 98)
+                            pushMatrix();
+                            translate(window.innerWidth/3.2, window.innerHeight/2.8);
+                            rotate(-7)
+                            rect(0, 0, window.innerHeight/23, window.innerHeight/7, 20);
+                            popMatrix();
+                            pushMatrix();
+                            translate(window.innerWidth/3.7, window.innerHeight/3)
+                            rotate(7)
+                            rect(0, 0, window.innerHeight/23, window.innerHeight/7, 20);
+                            popMatrix();
+                            rect(window.innerWidth/3.8, window.innerHeight/3.1, window.innerHeight/9, window.innerHeight/5.5, 20);
+                            
+                            
+                           
+                            
+                            fill(212,175,55)
+                            rect(window.innerWidth/3.8, window.innerHeight/2.2, window.innerHeight/9, window.innerHeight/40, 0);
+                            //rgb(92, 40, 40)
+                            fill(92, 40, 40);
+                            rect(window.innerWidth/3.5, window.innerHeight/2.2, window.innerHeight/17, window.innerHeight/40, 0);
+                        }
+                            fill(0)
+                            textSize(window.innerHeight/15)
+                            text("STAND FIRM", window.innerWidth/3, window.innerHeight/10);
+                            fill(0, 255, 72);
+                            rect(window.innerWidth/2.5, window.innerHeight/6.1, window.innerHeight/4, window.innerHeight/9, window.innerHeight/5)
+                            fill(0);
+                            textSize(window.innerHeight/15)
+                            text("COOL!", window.innerWidth/2, window.innerHeight/4.5);
+                            if (mouseX >= window.innerWidth/2.5 && mouseY >= window.innerHeight/6.1 && mouseX <=  window.innerWidth/2.5+window.innerHeight/5 && mouseY <= window.innerHeight/6.1+window.innerHeight/9) {
+                                cursor(HAND)
+                            }
+                            else {
+                                cursor();
+                            }
+                            
+                        }
+                        if (n === "Tuesday") {
+                            {
+                            fill(222, 207, 155);//rgb(240, 93, 98)
+                            ellipse(window.innerWidth/3.3, window.innerHeight/3.7, window.innerHeight/9, window.innerHeight/9);
+                            fill(0)
+                            rect(window.innerWidth/3.8, window.innerHeight/2.3, window.innerHeight/23, window.innerHeight/5, 20);
+                            rect(window.innerWidth/3.25, window.innerHeight/2.3, window.innerHeight/23, window.innerHeight/5, 20);
+                            rect(window.innerWidth/3.50, window.innerHeight/2.3, window.innerHeight/14, window.innerHeight/13, 0);
+                            fill(240, 93, 98)
+                            pushMatrix();
+                            translate(window.innerWidth/3.2, window.innerHeight/2.8);
+                            rotate(-7)
+                            rect(0, 0, window.innerHeight/23, window.innerHeight/7, 20);
+                            popMatrix();
+                            pushMatrix();
+                            translate(window.innerWidth/3.7, window.innerHeight/3)
+                            rotate(7)
+                            rect(0, 0, window.innerHeight/23, window.innerHeight/7, 20);
+                            popMatrix();
+                            rect(window.innerWidth/3.8, window.innerHeight/3.1, window.innerHeight/9, window.innerHeight/5.5, 20);
+                            
+                            
+                           
+                            
+                            fill(212,175,55)
+                            rect(window.innerWidth/3.8, window.innerHeight/2.2, window.innerHeight/9, window.innerHeight/40, 0);
+                            //rgb(92, 40, 40)
+                            fill(92, 40, 40);
+                            rect(window.innerWidth/3.5, window.innerHeight/2.2, window.innerHeight/17, window.innerHeight/40, 0);
+                        }
+                            fill(0)
+                            textSize(window.innerHeight/15)
+                            text("BELT OF TRUTH", window.innerWidth/3, window.innerHeight/10);
+                            //rgb(0, 255, 72)
+                            fill(0, 255, 72);
+                            rect(window.innerWidth/2.5, window.innerHeight/6.1, window.innerHeight/4, window.innerHeight/9, window.innerHeight/5)
+                            fill(0);
+                            textSize(window.innerHeight/15)
+                            text("COOL!", window.innerWidth/2, window.innerHeight/4.5);
+                            if (mouseX >= window.innerWidth/2.5 && mouseY >= window.innerHeight/6.1 && mouseX <=  window.innerWidth/2.5+window.innerHeight/5 && mouseY <= window.innerHeight/6.1+window.innerHeight/9) {
+                                cursor(HAND)
+                            }
+                            else {
+                                cursor();
+                            }
+                            
+                            
+                        }
+                    }
+                    
                     
                     
                     
