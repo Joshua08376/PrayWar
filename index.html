@@ -62,7 +62,6 @@
             weekday[5] = "Friday";
             weekday[6] = "Saturday";
             var n = weekday[d.getDay()];
-            
             mouseClicked = function() {
                 if (scene === 0) {
                     if (dist(mouseX, mouseY,window.innerWidth/3.2, window.innerHeight/5) <= (window.innerHeight/4)/2) {
@@ -210,9 +209,6 @@
                     }
                     break;
                     case 3: {
-                        rectMode(CENTER);
-                        ellipseMode(CENTER);
-                        textAlign(CENTER, CENTER);
                         background(173, 216, 230);
                         if (n === "Monday") {
                             {
@@ -221,9 +217,9 @@
                                 ellipse(window.innerWidth/3.5, window.innerHeight/4.3, window.innerHeight/8, window.innerHeight/8)
                                 fill(0);
                                 //legs
-                                rect(window.innerWidth/3.83, window.innerHeight/2, window.innerHeight/19, window.innerHeight/3.8, 20)
-                                rect(window.innerWidth/3.25, window.innerHeight/2, window.innerHeight/19, window.innerHeight/3.8, 20)
-                                rect(window.innerWidth/3.50, window.innerHeight/2.2, window.innerHeight/17, window.innerHeight/18)                               
+                                rect(window.innerWidth/3.83, window.innerHeight/2, window.innerHeight/19-5, window.innerHeight/3.8-5, 20)
+                                rect(window.innerWidth/3.25, window.innerHeight/2, window.innerHeight/19-5, window.innerHeight/3.8-5, 20)
+                                rect(window.innerWidth/3.50, window.innerHeight/2.2, window.innerHeight/17-5, window.innerHeight/18-5)                               
                                 // arms
                                 pushMatrix();
                                 translate(window.innerWidth/4.28, window.innerHeight/2.68)
@@ -270,9 +266,9 @@
                                 ellipse(window.innerWidth/3.5, window.innerHeight/4.3, window.innerHeight/8, window.innerHeight/8)
                                 fill(0);
                                 //legs
-                                rect(window.innerWidth/3.83, window.innerHeight/2, window.innerHeight/19, window.innerHeight/3.8, 20)
-                                rect(window.innerWidth/3.25, window.innerHeight/2, window.innerHeight/19, window.innerHeight/3.8, 20)
-                                rect(window.innerWidth/3.50, window.innerHeight/2.2, window.innerHeight/17, window.innerHeight/18)                               
+                                rect(window.innerWidth/3.83, window.innerHeight/2, window.innerHeight/19-5, window.innerHeight/3.8-5, 20)
+                                rect(window.innerWidth/3.25, window.innerHeight/2, window.innerHeight/19-5, window.innerHeight/3.8-5, 20)
+                                rect(window.innerWidth/3.50, window.innerHeight/2.2, window.innerHeight/17-5, window.innerHeight/18-5)                               
                                 // arms
                                 pushMatrix();
                                 translate(window.innerWidth/4.28, window.innerHeight/2.68)
