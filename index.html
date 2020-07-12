@@ -44,10 +44,10 @@
 	            this[["KAInfiniteLoopCount"]] = -Infinity;
             })();
 
-            //legs to big
+            
              rectMode(CENTER);
              ellipseMode(CENTER);
-            var scene = 0;
+            var scene = 3;
             var months = month();
             var days = day();
             var years = year();
@@ -102,7 +102,7 @@
             draw = function() {
                 switch(scene){
                     case 0: {
-                        //rgb(219, 203, 31)
+                        
                         background(173, 216, 230);
                         fill(0, 0 ,0);
                         ellipse(window.innerWidth/3.2, window.innerHeight/5, window.innerHeight/4, window.innerHeight/4);
@@ -123,7 +123,7 @@
                             cursor();
                         }
                         
-                    }//end of case 0
+                    }/*end of case 0*/
                     break;
                     case 1: {
                         background(173, 216, 230);
@@ -135,7 +135,7 @@
                         
                         fill(0, 102, 255);
                         ellipse(window.innerWidth/16, window.innerHeight/12, window.innerHeight/8, window.innerHeight/8)
-                        //rgb(0, 102, 255)
+                        
                         fill(0, 0, 0);
                         textSize(window.innerHeight/25);
                         text("BACK", window.innerWidth/16, window.innerHeight/12);       
@@ -185,7 +185,7 @@
                             textSize(window.innerHeight/20)
                             text("Pray for those needing salvation.", window.innerWidth/3.2, window.innerHeight/4)
                         }
-                        //rgb(255, 234, 0)
+                        
                         fill(0, 9, 255);
                         rect(window.innerWidth/2.0, window.innerHeight/1.8, window.innerHeight/4, window.innerHeight/8, 20)
                         fill(255, 234, 0)
@@ -200,7 +200,7 @@
                         else {
                             cursor();
                         }
-                        fill(255, 0, 0);//rgb(255, 0, 0)
+                        fill(255, 0, 0);
                         rect(window.innerWidth/10, window.innerHeight/1.8, window.innerHeight/4, window.innerHeight/8, 20)
                         fill(0)
                         textSize(window.innerHeight/15);
@@ -212,15 +212,15 @@
                     case 3: {
                         background(173, 216, 230);
                         {
-                                //head
+                                
                                 fill(255, 171, 171); 
                                 ellipse(window.innerWidth/3.5, window.innerHeight/4.3, window.innerHeight/8, window.innerHeight/8)
                                 fill(0);
-                                //legs
-                                rect(window.innerWidth/3.83, window.innerHeight/2, window.innerHeight/19-10, window.innerHeight/3.8-5, 20)
-                                rect(window.innerWidth/3.25, window.innerHeight/2, window.innerHeight/19-10, window.innerHeight/3.8-5, 20)
-                                rect(window.innerWidth/3.54, window.innerHeight/2.2, window.innerHeight/8-10, window.innerHeight/18-5)                               
-                                // arms
+                                
+                                rect(window.innerWidth/3.83, window.innerHeight/2, window.innerWidth/20-10, window.innerHeight/3.8-5, 20)
+                                rect(window.innerWidth/3.25, window.innerHeight/2, window.innerWidth/20-10, window.innerHeight/3.8-5, 20)
+                                rect(window.innerWidth/3.54, window.innerHeight/2.2, window.innerWidth/12-10, window.innerHeight/18-5)                               
+                               
                                 pushMatrix();
                                 translate(window.innerWidth/4.28, window.innerHeight/2.68)
                                 rotate(7)
@@ -232,12 +232,12 @@
                                 rotate(-7)
                                 rect(0,0, window.innerHeight/19, window.innerHeight/6.2, 20)
                                 popMatrix();
-                                //body
+                               
                                 fill(181, 18, 18)
                                 rect(window.innerWidth/3.5, window.innerHeight/2.65, window.innerHeight/8, window.innerHeight/6, 20)
                                 
                                 
-                            }//human
+                            }
                         if (n === "Monday") {
                             fill(0);
                             textSize(window.innerHeight/20)
@@ -268,7 +268,7 @@
                             rect(window.innerWidth/3.5, window.innerHeight/2.3, window.innerHeight/7.7, window.innerHeight/28)
                             fill(89, 34, 36)
                             rect(window.innerWidth/3.5, window.innerHeight/2.3, window.innerHeight/12.4, window.innerHeight/28)
-                            }//belt
+                            }
                             {
                                 fill(115, 115, 115);
                                 pushMatrix();
@@ -280,7 +280,7 @@
                                 rect(window.innerWidth/3.5, window.innerHeight/2.57, window.innerHeight/8, window.innerHeight/14.7, 0)
                                 
                                 popMatrix();
-                            }//breastplate
+                            }
                             fill(0)
                             textSize(window.innerHeight/15)
                             text("Breastplate of Righteousness", window.innerWidth/3, window.innerHeight/10);
@@ -291,7 +291,7 @@
                         }
                         {
                             
-                            //rgb(0, 255, 72)
+                            
                             fill(0, 255, 72);
                             rect(window.innerWidth/2.1, window.innerHeight/4.4, window.innerHeight/4, window.innerHeight/9, window.innerHeight/5)
                             fill(0);
@@ -303,15 +303,15 @@
                             else {
                                 cursor();
                             }
-                            }//button
+                            }
                     }
                     
                     
                     
                     
-                }// end of switch scenes
+                }
                 
-            };// end of draw
+            };
         
         
         
@@ -326,7 +326,7 @@
         
         
         
-        }// end of PJS
+        }
         
         
     }};
